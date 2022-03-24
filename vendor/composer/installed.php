@@ -43,15 +43,6 @@
                 0 => '1.11.99',
             ),
         ),
-        'robthree/twofactorauth' => array(
-            'pretty_version' => '1.8.1',
-            'version' => '1.8.1.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../robthree/twofactorauth',
-            'aliases' => array(),
-            'reference' => '5afcb45282f1c75562a48d479ecd1732c9bdb11b',
-            'dev_requirement' => false,
-        ),
         'symfony/polyfill-ctype' => array(
             'pretty_version' => 'v1.23.0',
             'version' => '1.23.0.0',
