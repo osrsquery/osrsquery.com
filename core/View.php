@@ -21,7 +21,7 @@ class View {
 
         extract($args, EXTR_SKIP);
 
-        $file = dirname(__DIR__) . "/app/Views/$view";  // relative to Core directory
+        $file = dirname(__DIR__) . "/App/Views/$view";  // relative to Core directory
 
         if (is_readable($file)) {
             require $file;
@@ -47,7 +47,7 @@ class View {
         $args = Session::userToArray($args);
 
         if ($twig === null) {
-            $loader = new \Twig\Loader\FilesystemLoader(dirname(__DIR__) . '/app/Views');
+            $loader = new \Twig\Loader\FilesystemLoader(dirname(__DIR__) . '/App/Views');
             $twig = new \Twig\Environment($loader);
         }
 
