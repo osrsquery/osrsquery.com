@@ -66,18 +66,11 @@ class ComposerStaticInitbf02bf6c8d134df9a8ad40e5d0abe2d9
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'RobThree\\Auth\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/robthree/twofactorauth/lib',
-        ),
         'PackageVersions\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
         ),
-        'MongoDB\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
-        ),
+
         'Jean85\\' => 
         array (
             0 => __DIR__ . '/..' . '/jean85/pretty-package-versions/src',
