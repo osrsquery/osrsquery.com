@@ -1,5 +1,6 @@
 export class SettingPanel {
     
+    isSettingsExpanded = false;
     map;
 
     constructor(map) {
@@ -96,8 +97,10 @@ export class SettingPanel {
     }
 
     trigger() {
-        var $marginRighty = $('.inner');
-        $marginRighty.animate({marginRight: parseInt($marginRighty.css('marginRight'),10) == 0 ? $marginRighty.outerWidth() : 0});
+        const $marginRighty = $('.inner');
+        const rightOffset = this.isSettingsExpanded ? 0 : -$marginRighty.outerWidth();
+        $marginRighty.animate({right: rightOffset}, 300);
+        this.isSettingsExpanded = !this.isSettingsExpanded;
     }
    
     

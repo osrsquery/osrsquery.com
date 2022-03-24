@@ -410,27 +410,24 @@ html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% i
 }
 
 .inner {
-    float: right;
   overflow-x: hidden;
-    overflow-y: auto;
-    left: 245px;
-    position: relative;
-    z-index: 40000;
-    width:245px;
-	display:inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-	height: 100%;
-	padding: 5px 0px;
-	background-color: #1D1A1A;
+  overflow-y: auto;
+  z-index: 40000;
+  width: 247px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-height: calc(100% - 44px);
+  right: -247px;
+  padding: 5px 0px;
+  background-color: #1d1a1a;
 
-    border-bottom: 2px solid #201C1C;
-    border-left: 2px solid  #201C1C;
-    margin-top: 2px;
-    margin-left: 2px;
-    margin-right: 2px;
-    overflow-x: hidden;
-    overflow-y: auto;
+  border-bottom: 2px solid #201c1c;
+  border-left: 2px solid #201c1c;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
 }
 
 .input-group {
