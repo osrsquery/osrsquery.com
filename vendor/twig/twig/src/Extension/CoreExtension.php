@@ -578,43 +578,6 @@ function twig_number_format_filter(Environment $env, $number, $decimal = null, $
     return number_format((float) $number, $decimal, $decimalPoint, $thousandSep);
 }
 
-function custom_getLvlFromExp($value) {
-
-    $expTable = [0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107, 2411, 2746, 3115, 3523, 3973,
-    4470, 5018, 5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406,
-    24815, 27473, 30408, 33648, 37224, 41171, 45529, 50339, 55649, 61512, 67983, 75127, 83014, 91721, 101333,
-    111945, 123660, 136594, 150872, 166636, 184040, 203254, 224466, 247886, 273742, 302288, 333804, 368599,
-    407015, 449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895, 1096278, 1210421, 1336443,
-    1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776,
-    4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431];
-
-    $index = 0;
-    for ($index; $index < count($expTable); $index++) {
-
-        if ($expTable[$index] > $value) {
-            break;
-        }
-    }
-
-    return $index - 1;
-}
-
-function custom_format_url($value, $type, $action, $mode) {
-
-    $mode = (strtolower($mode) != 'normal') ? '?gm='.strtolower($mode) : '';
-    $action = (strtolower($action) != 'overall') ? '/'.strtolower($action) : '';
-
-    return "/highscores/{$type}{$action}{$mode}";
-}
-
-function custom_format_page_url($value, $type, $action, $mode) {
-    $mode = (strtolower($mode) != 'normal') ? '?gm='.strtolower($mode) : '';
-    $action = (strtolower($action) != 'overall') ? '/'.strtolower($action) : '';
-    $page = ($mode != '') ? '&page=' : '?page=';
-
-    return "/highscores/{$type}{$action}{$mode}{$page}";
-}
-
 function custom_format_bytes($bytes, $precision = 2) {
 
     $units = array('B', 'kB', 'MB', 'GB', 'TB');
@@ -626,62 +589,6 @@ function custom_format_bytes($bytes, $precision = 2) {
     $bytes /= pow(1024, $pow);
 
     return round($bytes, $precision) . ' ' . $units[$pow];
-}
-
-function custom_format_username($value, $usergroup, $donator, $mode) {
-
-    $icon = '';
-    
-    switch ($donator) {
-        case 'SAPPHIRE':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'EMERALD':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'RUBY':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'DIAMOND':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'ONYX':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'ZENYTE':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-        case 'AMETHYST':
-            $icon .= "<img class='mr-1' src='/resources/{$donator}.png'>";
-            break;
-    }
-
-    switch ($mode) {
-        case 'IRONMAN':
-            $icon .= "<img class='mr-1' src='/resources/{$mode}.png'>";
-            break;
-        case 'ULTIMATE_IRONMAN':
-            $icon .= "<img class='mr-1' src='/resources/{$mode}.png'>";
-            break;
-        case 'HARDCORE_IRONMAN':
-            $icon .= "<img class='mr-1' src='/resources/{$mode}.png'>";
-            break;
-        case 'GROUP_IRONMAN':
-            $icon .= "<img class='mr-1' src='/resources/{$mode}.png'>";
-            break;
-    }
-
-    /*switch ($usergroup) {
-        case 'DEVELOPER':
-            $color = '#5b5baf';
-            $icon .= "<img class='mr-1' src='/resources/{$usergroup}.png'>";
-            break;
-    }*/
-
-    $mode = strtolower($mode);
-    $donator = strtolower($donator);
-
-    return "<span class='{$mode} {$donator}'>{$icon}{$value}</span>";
 }
 
 /**
