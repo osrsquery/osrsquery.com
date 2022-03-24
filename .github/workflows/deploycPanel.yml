@@ -3,17 +3,16 @@
 name: Publish Website
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - uses: actions/checkout@v2
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@master
+      uses: airvzxf/ftp-deployment-action@latest
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
