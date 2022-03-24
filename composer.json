@@ -1,0 +1,13 @@
+{
+    "require": {
+        "twig/twig": "~3.0",
+        "mongodb/mongodb": "^1.8",
+        "robthree/twofactorauth": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    }
+}

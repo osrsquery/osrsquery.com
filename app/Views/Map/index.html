@@ -1,0 +1,183 @@
+
+
+{% block head %}
+    <title>OsrsQuery - Map</title>
+	<link href="../resources/favicon.ico" rel="icon" sizes="any" type="image/ico+xml">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css" rel="stylesheet">
+	<link href="../content/map.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.js"></script>
+
+	<script src="../scripts/map/map.js" type="module"></script>
+	
+    <script src="../scripts/dropdown.js" type="module"></script>
+
+	<link href="/content/osrsquery.css" rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/2d24bdf71a.js"></script>
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect">
+{% endblock %}
+	
+{% block body %}
+	
+    <div class="container-fluid" id="container">
+		<div class="box">
+			<div class="container">
+				<div class="navigation-flex">
+					<a class="logo-image" href="https://osrsquery.com"><img alt="" src="../resources/osrsquery_logo.png"></a>
+					<div class="nav-content">
+                        <select id="goLocation" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select" style="margin-right: 10px;"> </select>
+						<input type="text" class="select-field w-input" maxlength="256" name="field" data-name="Field" placeholder="Enter Location" id="locationSearch" style="margin-right: 10px;">
+						<input type="number" class="select-field w-input" maxlength="256" name="field" data-name="Field" placeholder="Enter Region" id="regionSearch">
+					</div>
+                   
+					<div class="sep"></div>
+					<div class="nav-button">
+						<a id="settings" target="_blank" class="settings-btn w-button"><i class="fa fa-cog" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="map-container">
+		<div id="map">
+			<div class="inner">
+				<div class="settings-section">
+					<label class="field-label" style="font-size: 14px;">Map Type:</label>
+					<select id="setLayer" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select" style="margin-right: 10px;"> 
+						<option> Normal </option>
+						<option> Height Map </option>
+						<option> 3d Map </option>
+					</select>
+					<hr class="hr">
+					
+				</div>
+				<div class="settings-section">
+					<label class="field-label" style="font-size: 14px;">Information Labels:</label>
+					
+
+					<div>
+                    	<input type="checkbox" class="form-check-input medium-check-input" id="showCoordinates">
+						<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Show Coordinates</label>
+					</div>
+					<div>
+                    	<input type="checkbox" class="form-check-input medium-check-input" id="showLabels">
+						<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Show Labels</label>
+					</div>
+					<div>
+                    	<input type="checkbox" class="form-check-input medium-check-input" id="showGrid">
+						<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Show Region Grid</label>
+					</div>
+					<div>
+                    	<input type="checkbox" class="form-check-input medium-check-input" id="showRegionLables">
+						<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Show Region Lables</label>
+					</div>
+					<hr class="hr">
+					
+				</div>
+				<div class="settings-section">
+					<label class="field-label" style="font-size: 14px;">Output & Api Settings:</label>
+					
+					
+					<select id="output-type" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select" style="margin-right: 10px;"> 
+						<option>Array</option>
+						<option>List</option>
+						<option>Arrays.asList</option>
+						<option>Raw</option>
+					</select>
+
+					<p></p>
+					<select id="bot-api" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select" style="margin-right: 10px;"> 
+						<option>RuneLite</option>
+						<option>TRiBot</option>
+						<option>OSBot</option>
+						<option>DreamBot</option>
+						<option>RSPeer</option>
+						<option>QuantumBot</option>
+						<option>RuneMate</option>
+					</select>
+					
+				
+					<hr class="hr">
+					
+				</div>
+				<div class="settings-section">
+					<label class="field-label" style="font-size: 14px;">Extra Information:</label>
+
+					<div id="extra_labels">
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="teleport_normal">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Spellbook Normals</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="teleport_ancient">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Spellbook Ancient</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="teleport_luner">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Spellbook Luner</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="teleport_arceuus">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Spellbook Arceuus</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="scroll">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Teleport Scrolls</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="diary">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Diary Teleports</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="wilderness">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Wilderness Teleports</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="misc">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Miscellaneous Teleports</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="poh">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Poh Portals</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="balloon">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Hot Air Balloons</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="glider">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Gliders</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="spirittrees">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Spirit Trees</label>
+						</div>
+						<div>
+							<input type="checkbox" class="form-check-input medium-check-input" id="canoe">
+							<label class="field-label p-0" style="padding-bottom: 2px;" for="transparentSprite">Canoes</label>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+
+
+	<div class="slide-panel" id="code-output-panel">
+		<pre id="code-output-pre"><code contenteditable="true" id="code-output"></code></pre>
+	</div>
+
+	
+{% endblock %}
