@@ -1,11 +1,12 @@
-
-import Footer from '../components/Footer'
-import NavBar from '../components/Navbar'
+import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hey</h1>
-    </div>
+    <>
+      <div>
+        <h1>Hey</h1>
+      </div>
+    </>
+    
   )
 }
