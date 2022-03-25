@@ -58,17 +58,17 @@ export default {
     additionalLinkTags : [
       {
         rel: 'apple-touch-icon',
-        href: 'apple-touch-icon.png',
+        href: '/public/apple-touch-icon.png',
         sizes: '180x180'
       },
       {
         rel: 'android-chrome-icon',
-        href: 'android-chrome-192x192.png',
+        href: '/public/android-chrome-192x192.png',
         sizes: '192x192'
       },
       {
         rel: 'android-chrome-icon',
-        href: 'android-chrome-256x256',
+        href: '/public/android-chrome-256x256',
         sizes: '256x256'
       }
     ]
