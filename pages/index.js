@@ -3,9 +3,21 @@ import Head from 'next/head'
 export default function Home() {
   return (
     <>
-      <div>
+      <section className='container'>
         <h1>Hey</h1>
-      </div>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+        <h1>Hey</h1>
+       
+    
+
+      </section>
     </>
     
   )
