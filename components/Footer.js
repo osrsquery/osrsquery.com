@@ -43,22 +43,22 @@ const Footer = () => {
                 <div className="footer-nav-block">
                   <h2 className={styles.footerheading}>Quick Navigation</h2>
                   <ul role="list">
-                    <li><a href="/" className={styles.footerlink}><i><GiAxeSword/></i> OSRS Items</a></li>
-                    <li><a href="/" className={styles.footerlink}><i><FaGhost/></i> OSRS Npc</a></li>
-                    <li><a href="/" className={styles.footerlink}><i><FaVectorSquare/></i> OSRS Models</a></li>
-                    <li><a href="/" className={styles.footerlink}><i><BiCubeAlt/></i> OSRS Objects</a></li>
-                    <li><a href="/" className={styles.footerlink}><i><GiEarthAfricaEurope/></i> OSRS Worldmap</a> </li>
+                    <li><i><GiAxeSword/></i> OSRS Items</li>
+                    <li><i><FaGhost/></i> OSRS Npc</li>
+                    <li><i><FaVectorSquare/></i> OSRS Models</li>
+                    <li><i><BiCubeAlt/></i> OSRS Objects</li>
+                    <li><i><GiEarthAfricaEurope/></i> OSRS Worldmap</li>
                   </ul>
                 </div>
 
                 <div className="footer-nav-block">
                   <h2 className={styles.footerheading}>Extra Links</h2>
                   <ul role="list">
-                    <li><a href="https://runelist.io/" className={styles.footerlink}><i><AiOutlineUnorderedList/></i> RuneList</a></li>
-                    <li><a href="https://fluxious-rsps.com/" className={styles.footerlink}><i><ImFacebook/></i> Facebook</a></li>
-                    <li><a href="https://github.com/osrsquery/OsrsQuery" className={styles.footerlink}><i><AiFillGithub/></i> Github</a></li>
-                    <li><a href="https://probemas.com/" className={styles.footerlink}><i><AiFillApi/></i> API</a></li>
-                    <li><a href="https://hosthappy.net/" className={styles.footerlink}><i><BsServer/></i> DigitalOcean</a></li>
+                    <li><i><AiOutlineUnorderedList/></i> RuneList</li>
+                    <li><i><ImFacebook/></i> Facebook</li>
+                    <li><i><AiFillGithub/></i> Github</li>
+                    <li><i><AiFillApi/></i> API</li>
+                    <li><i><BsServer/></i> DigitalOcean</li>
                   </ul>
                 </div>
               </div>
@@ -66,9 +66,9 @@ const Footer = () => {
               <div className={styles.ccflexhorizontal}>
                 <div><div className={styles.cctext}>Copyright © 2022 OSRSQuery - All rights reserved.</div></div>
                 <div className={styles.cclinkflex}>
-                  <a href="https://hosthappy.net/" className={styles.cclink}><i><GiWhaleTail/></i> Hosted by DigitalOcean</a>
-                  <a href="https://www.runelist.io/" className={styles.cclink}><i><AiOutlinePoweroff/></i> Powered by RuneList</a>
-                  <a href="https://www.gfxdistrict.com/" className={styles.cclink}><i><FaPaintBrush/></i> Design by Mark</a>
+                  <i><GiWhaleTail/></i> Hosted by DigitalOcean
+                  <i><AiOutlinePoweroff/></i> Powered by RuneList
+                  <i><FaPaintBrush/></i> Design by Mark
                 </div>
               </div>
             </div>
