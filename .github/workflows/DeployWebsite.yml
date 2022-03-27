@@ -16,9 +16,15 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
               cd osrsquery.com
+              📂 Sync files
               export NVM_DIR=~/.nvm
               source ~/.nvm/nvm.sh
+              📂 Sync files1
               git pull
+              📂 Sync files2
               npm install
+              📂 Sync files3
               npm run build
+              📂 Sync files4
               pm2 restart site
+              📂 Sync files5
