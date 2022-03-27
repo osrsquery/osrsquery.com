@@ -8,17 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 📂 Logging into SSH
+      - name: 🚚 Get latest SSH
         uses: appleboy/ssh-action@master
+        
+      - name: 📂 Deploying Website
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
               cd osrsquery.com
-              📂 Sync files1
               git pull
-              📂 Sync files2
               npm install
               npm run build
-              pm2 restart site
+                pm2 restart site
