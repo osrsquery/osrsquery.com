@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: 🚧 Publish Website
 on:
   workflow_dispatch:
   push:
@@ -8,11 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: multiple command
+      - name: 📂 Logging into SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-              ls
+              cd osrsquery.com
+              📂 Sync files1
+              git pull
+              📂 Sync files2
+              npm install
+              npm run build
+              pm2 restart site
