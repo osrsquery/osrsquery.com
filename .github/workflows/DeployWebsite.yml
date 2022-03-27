@@ -8,9 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest SSH
-        uses: appleboy/ssh-action@master
-        
       - name: 📂 Deploying Website
         with:
           host: ${{ secrets.HOST }}
