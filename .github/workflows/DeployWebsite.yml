@@ -15,16 +15,16 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
+              echo 📂 Finding OsrsQuery Directory
               cd osrsquery.com
-              📂 Sync files
               export NVM_DIR=~/.nvm
               source ~/.nvm/nvm.sh
-              📂 Sync files1
+              echo 🗃️ Pulling git Files
               git pull
-              📂 Sync files2
+              echo 🗂️ Looking for new Dependencies
               npm install
-              📂 Sync files3
+              echo 🔨 Building Website
               npm run build
-              📂 Sync files4
+              echo🔄 Restarting Website
               pm2 restart site
-              📂 Sync files5
+              echo ✔️ Website Updated
