@@ -905,6 +905,9 @@ const _317 = ({ router }) => {
                   /> </React.Fragment>}
 
 {isTabModelHeader && <React.Fragment>
+
+
+  
   <CopyBlock
                     language="java"
                     text={`private Model(int modelId) {
@@ -924,7 +927,8 @@ const _317 = ({ router }) => {
                     wrapLines={true}
                     theme={dracula}
                     showLineNumbers={false}
-                  /> </React.Fragment>}
+                  /> 
+                  
                   <React.Fragment><CopyBlock
                     language="java"
                     text={`package com.fluxious.entity.model;
@@ -2330,6 +2334,9 @@ const _317 = ({ router }) => {
                     theme={dracula}
                     showLineNumbers={false}
                   /> </React.Fragment>
+                  
+                  </React.Fragment>}
+                  
 
               </TabBody>
             </TabContainer>
