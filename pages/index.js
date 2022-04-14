@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className='container'>
-        <h1>Hey Mark</h1>
+        <h1>Hey Mark 2</h1>
 
     
 
