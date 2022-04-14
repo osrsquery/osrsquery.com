@@ -4,17 +4,8 @@ export default function Home() {
   return (
     <>
       <section className='container'>
-        <h1>Heydfgdfgdf</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-        <h1>Hey34</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-        <h1>Hey</h1>
-       
+        <h1>Hey Mark</h1>
+
     
 
       </section>
