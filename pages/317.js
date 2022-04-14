@@ -27,7 +27,7 @@ const _317 = ({ router }) => {
 
   return (
     <>
-      <div class="container">
+      <div className="container">
 
 
         <div className="content-container-block">
@@ -42,7 +42,7 @@ const _317 = ({ router }) => {
                   </div>
 
                   <div className="table-form-filters--right">
-                    <div className="input-group" id="locality-dropdown"><label htmlFor="number-of-entries-2" className="field-label">Select Revision:  </label><select id="number-of-entries-2" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select">
+                    <div className="input-group" id="locality-dropdown"><label htmlFor="number-of-entries-2" className="field-label">Select Revision:  </label><select id="number-of-entries-2" name="number-of-entries-2" data-name="Number Of Entries 2" className="select-field w-select">
                       {Object.keys(revs).map(element => <option key={element} value={revs[element]}>{element}</option>)}
                     </select></div>
 
