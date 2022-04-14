@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { withRouter } from "next/router"
-import { TabHead, TabContainer, TabBody, Tab } from "../pages/tabStyles.js"
+import { TabHead, TabContainer, TabBody, Tab } from "../components/tabStyles.js"
 import { CopyBlock, dracula } from "react-code-blocks";
 import NodeFetch from 'node-fetch' 
 
