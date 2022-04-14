@@ -30,19 +30,19 @@ const _317 = ({ router }) => {
       <div class="container">
 
 
-        <div class="content-container-block">
-          <h2 class="section-heading center">oldschool runescape data 317</h2>
-          <p class="section-heading-paragraph">Please use the tools below to download any Oldschool RuneScape data in 317 format. Select the Revision that you would like to download.</p>
-          <div class="vertical-flex">
+        <div className="content-container-block">
+          <h2 className="section-heading center">oldschool runescape data 317</h2>
+          <p className="section-heading-paragraph">Please use the tools below to download any Oldschool RuneScape data in 317 format. Select the Revision that you would like to download.</p>
+          <div className="vertical-flex">
             <div>
               <form id="search-sprite-id" data-name="search-sprite-id">
-                <div class="table-form-filters">
-                  <div class="table-form-filters--left">
-                    <Link href="https://repo.osrsquery.com/204/317.zip"><a class="quick-link-btn-purple w-button">Download</a></Link>
+                <div className="table-form-filters">
+                  <div className="table-form-filters--left">
+                    <Link href="https://repo.osrsquery.com/204/317.zip"><a className="quick-link-btn-purple w-button">Download</a></Link>
                   </div>
 
-                  <div class="table-form-filters--right">
-                    <div class="input-group" id="locality-dropdown"><label for="number-of-entries-2" class="field-label">Select Revision:  </label><select id="number-of-entries-2" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select">
+                  <div className="table-form-filters--right">
+                    <div className="input-group" id="locality-dropdown"><label htmlFor="number-of-entries-2" className="field-label">Select Revision:  </label><select id="number-of-entries-2" name="number-of-entries-2" data-name="Number Of Entries 2" class="select-field w-select">
                       {Object.keys(revs).map(element => <option key={element} value={revs[element]}>{element}</option>)}
                     </select></div>
 
