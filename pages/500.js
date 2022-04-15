@@ -22,14 +22,14 @@ const Custom500 = () => {
                                 <div className="quick-link-badge purple">
                                     <FaHouseDamage size={180} color="#4ACDD1"/>
                                 </div>
-                                <Link href={'/'}><a className="quick-link-btn-purple w-button">Homepage</a></Link>
+                                <Link href={"/"}><a className="quick-link-btn-purple w-button">Homepage</a></Link>
                             </div>
 
                             <div className="quick-link-group">
                                 <div className="quick-link-badge green">
                                      <BsDiscord size={180} color="#4ACDD1"/>
                                 </div>
-                                <Link href={'https://discord.gg/Z3GgPdVu9b'}><a className="quick-link-btn w-button">Discord</a></Link>
+                                <Link href={"https://discord.gg/Z3GgPdVu9b"}><a className="quick-link-btn w-button">Discord</a></Link>
                             </div>
 
                         </div>
