@@ -16,6 +16,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
               echo 📂 Finding OsrsQuery Directory
+              echo 📂 ${{ secrets.PASSWORD }}
+              echo 📂 Hi Hooder
               cd osrsquery.com
               export NVM_DIR=~/.nvm
               source ~/.nvm/nvm.sh
